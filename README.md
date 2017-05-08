@@ -58,9 +58,46 @@ ADD index.html /usr/local/apache2/htdocs/index.html
 Dockerfile en el que se especifica la imagen y el archivo a guardar en la dirección de apache para desplegar el "index.html"
 
 3. Configuración del nginx.
+Para el nginx se define incialmente el archvivo de configuración del mismo para usar nginx como balanceador de carga, de la siguiente manera:
+```
+worker_processes 4;
+ 
+events { worker_connections 1024; }
+ 
+http {
+    sendfile on;
+ 
+    upstream app_servers {
+        server app1:80;
+        server app2:80;
+        server app3:80;
+    }
+ 
+    server {
+        listen 80;
+ 
+        location / {
+            proxy_pass         http://app_servers;
+            proxy_redirect     off;
+            proxy_set_header   Host $host;
+            proxy_set_header   X-Real-IP $remote_addr;
+            proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header   X-Forwarded-Host $server_name;
+        }
+    }
+}
 
-
+```
+Y difiniendo su respectivo Dockerfile:
+```
+FROM nginx
+RUN rm /etc/nginx/conf.d/default.conf && rm -r /etc/nginx/conf.d
+ADD nginx.conf /etc/nginx/nginx.conf
+RUN echo "daemon off;" >> /etc/nginx/nginx.conf
+CMD service nginx start
+```
 4. Configuración de Docker Compose.
+La definición del Docker-Compose para el despliegue de la infraestructura de solución es la siguiente:
 ```
 version: '2'
  
