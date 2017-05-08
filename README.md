@@ -135,5 +135,14 @@ volumes:
    
 ### Capturas de funcionamiento:
 <p align="center">
-  <img src="images/01_diagrama_despliegue.png" width="650"/>
+  <img src="images/captura1.png" width="650"/>
+</p>
+<p align="center">
+  <img src="images/captura2.png" width="650"/>
+</p>
+<p align="center">
+  <img src="images/captura3.png" width="650"/>
+</p>
+<p align="center">
+  <img src="images/captura4.png" width="650"/>
 </p>
