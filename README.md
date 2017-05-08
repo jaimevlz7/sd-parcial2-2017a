@@ -11,7 +11,10 @@ Aprovisionamiento	de	un	ambiente	compuesto	por	los	siguientes	elementos:	un serv
   <img src="images/01_diagrama_despliegue.png" width="650"/>
 </p>
 
-### Desarrollo
+
+### Teoría:
+
+### Desarrollo:
 
 Inicialmente para el desarrollo del parcial:
 
@@ -130,5 +133,7 @@ volumes:
    data_nginx:
    ```
    
-
-
+### Capturas de funcionamiento:
+<p align="center">
+  <img src="images/01_diagrama_despliegue.png" width="650"/>
+</p>
