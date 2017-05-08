@@ -17,6 +17,16 @@ Para el proyecto se necesitan desplegar 4 maquinas, 3 maquinas que funcionen com
 
 Se utilizaron las imagenes de httpd (apache) y nginx, debido a la facilidad de configuración de cada una. Apache solamente recibe la aplicación web (backend y frontedn, si es el caso o index.html sencillo). Y nginx que funciona como un proxy (balanceador de carga) que solo necesita la configuración de su documento nginx.conf. <br>
 
+A la hora de la configuración pensando en un ambiente de producción se hizo uso de los volumenes, para almacenar sus respectivos archivos de configuración de cada maquina.<br>
+
+Adicionalmente cabe aclarar que por ser una actividad academica, se realizo creando 3 web en el docker-compose. Pero en situaciones practicas se utilizan los siguientes comandos:<br>
+
+```
+#docker-compose build .
+#docker-compose scale app=3 proxy=1 up
+```
+Definiendo la cantidad de web (app en este caso) y los nginx (proxy en el ejemplo), habiendo configurado los nginx y web con anterioridad para una infraestructura a gran escala.<br>
+
 ### Desarrollo:
 
 Inicialmente para el desarrollo del parcial:
