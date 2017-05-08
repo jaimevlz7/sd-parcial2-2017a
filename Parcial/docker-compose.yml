@@ -1,0 +1,36 @@
+version: '2'
+ 
+services:
+  app1:
+    build:
+      context:  ./app1
+      dockerfile: Dockerfile
+    expose:
+      - "5000"
+
+  app2:
+    build:
+      context:  ./app2
+      dockerfile: Dockerfile
+    expose:
+      - "5000"
+
+  app3:
+    build:
+      context:  ./app3
+      dockerfile: Dockerfile
+    expose:
+      - "5000"
+ 
+  proxy:
+    build:
+      context:  ./nginx
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    links:
+      - app1
+      - app2
+      - app3
+
+
