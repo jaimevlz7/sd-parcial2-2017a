@@ -31,11 +31,11 @@ archivo debe ser examen2_codigoestudiante.pdf debe incluir lo siguiente:
 
 Inicialmente para el desarrollo del parcial:
 
-1. Configuración de las imagenes.
+#### 1. Configuración de las imagenes.
 
 Se instalaron las imagenes extraidas de docker hub, httpd y nginx (Imagenes ya preconfiguradas y modificadas para funcionar correctamente) teniendo en cuenta que con estas imagenes se podia cumplir el objetivo del parcial.
 
-2. Configuración de la aplicación web.
+#### 2. Configuración de la aplicación web.
 
 Primero se define un formato para la pagina web que se va a desplegar, en este caso la misma pagina web (cambiando solo el ID de web a WEB 1, WEB 2 o WEB 3, según sea el caso) para cada web de la solución (web1, web2 y web3) de la siguiente manera:
 ```
@@ -57,7 +57,7 @@ ADD index.html /usr/local/apache2/htdocs/index.html
 ```
 Dockerfile en el que se especifica la imagen y el archivo a guardar en la dirección de apache para desplegar el "index.html"
 
-3. Configuración del nginx.
+#### 3. Configuración del nginx.
 Para el nginx se define incialmente el archvivo de configuración del mismo para usar nginx como balanceador de carga, de la siguiente manera:
 ```
 worker_processes 4;
@@ -96,7 +96,7 @@ ADD nginx.conf /etc/nginx/nginx.conf
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 CMD service nginx start
 ```
-4. Configuración de Docker Compose.
+#### 4. Configuración de Docker Compose.
 La definición del Docker-Compose para el despliegue de la infraestructura de solución es la siguiente:
 ```
 version: '2'
