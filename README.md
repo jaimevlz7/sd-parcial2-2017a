@@ -1,4 +1,4 @@
-#sd-parcial2-2017a
+# sd-parcial2-2017a
 
 #### Nombre Estudiante: Jaime Vélez Escandón
 #### Código Estudiante: A00268524
