@@ -159,3 +159,17 @@ A continuación se encuentran las capturas de funcionamiento del parcial.
   <b>Captura 4. Prueba de peticiones de nginx.</b><br><br>
 </p>
 
+<p align="center">
+  <img src="images/captura5.png" width="650"/><br>
+  <b>Captura 5. Prueba de peticiones y web 1 en windows.</b><br><br>
+</p>
+
+<p align="center">
+  <img src="images/captura5.png" width="650"/><br>
+  <b>Captura 6. Prueba de peticiones y web 2 en windows.</b><br><br>
+</p>
+
+<p align="center">
+  <img src="images/captura5.png" width="650"/><br>
+  <b>Captura 7. Prueba de peticiones y web 3 en windows.</b><br><br>
+</p>
