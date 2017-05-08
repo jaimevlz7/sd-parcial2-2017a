@@ -137,12 +137,16 @@ volumes:
 <p align="center">
   <img src="images/captura1.png" width="650"/>
 </p>
+Captura 1. Prueba de balanceador web 1.
 <p align="center">
   <img src="images/captura2.png" width="650"/>
 </p>
+Captura 2. Prueba de balanceador web 2.
 <p align="center">
   <img src="images/captura3.png" width="650"/>
 </p>
+Captura 3. Prueba de balanceador web 3.
 <p align="center">
   <img src="images/captura4.png" width="650"/>
 </p>
+Captura 4 Prueba de peticiones a nginx.
