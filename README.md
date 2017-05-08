@@ -1,4 +1,4 @@
-# SistemasDistribuidos_P2
+#sd-parcial2-2017a
 
 #### Nombre Estudiante: Jaime Vélez Escandón
 #### Código Estudiante: A00268524
@@ -12,7 +12,10 @@ Aprovisionamiento	de	un	ambiente	compuesto	por	los	siguientes	elementos:	un serv
 </p>
 
 
-### Teoría:
+### Explicación:
+Para el proyecto se necesitan desplegar 4 maquinas, 3 maquinas que funcionen como servidor web y 1 maquina con nginx que haga las veces de balanceador de carga. La siguiente actividad se realiza teniendo en cuenta que es un posible escenario en un contexto de empresarial de procesos productivos u operativos. <br>
+
+Se utilizaron las imagenes de httpd (apache) y nginx, debido a la facilidad de configuración de cada una. Apache solamente recibe la aplicación web (backend y frontedn, si es el caso o index.html sencillo). Y nginx que funciona como un proxy (balanceador de carga) que solo necesita la configuración de su documento nginx.conf. <br>
 
 ### Desarrollo:
 
@@ -84,7 +87,7 @@ RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 CMD service nginx start
 ```
 #### 4. Configuración de Docker Compose.
-La definición del Docker-Compose para el despliegue de la infraestructura de solución es la siguiente:
+La definición del Docker-Compose para el despliegue de la infraestructura (volumenes, maquinas, puertos de operación, etc.) de solución es la siguiente:
 ```
 version: '2'
  
@@ -134,7 +137,7 @@ volumes:
    ```
    
 ### Capturas de funcionamiento:
-
+A continuación se encuentran las capturas de funcionamiento del parcial.
 
 <p align="center">
   <img src="images/captura1.png" width="650"/><br>
