@@ -137,22 +137,22 @@ volumes:
 
 
 <p align="center">
-  <img src="images/captura1.png" width="650"/>
-  <b>Captura 1. Prueba de balanceador web 1.</b><br>
+  <img src="images/captura1.png" width="650"/><br>
+  <b>Captura 1. Prueba de balanceador web 1.</b><br><br>
 </p>
 
 <p align="center">
-  <img src="images/captura2.png" width="650"/>
-  <b>Captura 2. Prueba de balanceador web 2.</b><br>
+  <img src="images/captura2.png" width="650"/><br>
+  <b>Captura 2. Prueba de balanceador web 2.</b><br><br>
 </p>
 
 <p align="center">
-  <img src="images/captura3.png" width="650"/>
-  <b>Captura 3. Prueba de balanceador web 3.</b><br>
+  <img src="images/captura3.png" width="650"/><br>
+  <b>Captura 3. Prueba de balanceador web 3.</b><br><br>
 </p>
 
 <p align="center">
-  <img src="images/captura4.png" width="650"/>
-  <b>Captura 4. Prueba de peticiones de nginx.</b><br>
+  <img src="images/captura4.png" width="650"/><br>
+  <b>Captura 4. Prueba de peticiones de nginx.</b><br><br>
 </p>
 
