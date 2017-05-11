@@ -106,28 +106,25 @@ services:
     build:
       context:  ./app1
       dockerfile: Dockerfile
-    expose:
-      - "5000"
+ 
     volumes:
-      - data_web:/data_web
+      - data_web:/usr/local/apache2/htdocs/
 
   app2:
     build:
       context:  ./app2
       dockerfile: Dockerfile
-    expose:
-      - "5000"
+  
     volumes:
-      - data_web:/data_web
+      - data_web:/usr/local/apache2/htdocs/
 
   app3:
     build:
       context:  ./app3
       dockerfile: Dockerfile
-    expose:
-      - "5000"
+
     volumes:
-      - data_web:/data_web
+      - data_web:/usr/local/apache2/htdocs/
   
   proxy:
     build:
@@ -140,7 +137,7 @@ services:
       - app2
       - app3
     volumes:
-      - data_nginx:/data_nginx
+      - data_nginx:/etc/nginx/
 volumes:
    data_web:
    data_nginx:
